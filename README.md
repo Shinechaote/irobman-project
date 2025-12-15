@@ -2,6 +2,7 @@
 
 This repository now focuses on a single MuJoCo-based manipulation stack. It provides a light, Mac-friendly simulation environment with configurable cameras, objects, and robot motion helpers.
 
+![iRobMan](imgs/vid.gif)
 ---
 
 ## 1. Prerequisites
@@ -16,8 +17,33 @@ This repository now focuses on a single MuJoCo-based manipulation stack. It prov
 
 ## 2. Repository Layout
 
-```text
-<todo>
+```shell
+.
+├── configs
+│   └── test_config_mj.yaml # configuration file for Mujoco simulation
+├── docs
+│   ├── Actions-control-guide.md # control guide
+│   ├── General-information.md # general guide
+│   └── Sensors-data-guide.md # sensor guide
+├── imgs
+│   └── vid.gif
+├── main.py
+├── pyproject.toml # uv project file
+├── README.md # main readme
+├── requirements.txt
+├── src
+│   └── mujoco_app
+│       ├── __init__.py
+│       ├── mj_robot.py # robot class
+│       ├── mj_simulation.py # simulation class
+│       ├── py.typed
+│       ├── scene_builder.py # scene builder class
+│       ├── scene.py # scene class
+│       └── transformations.py # useful transformations
+├── uv.lock
+├── view_object_with_sensors.py # sensor viewer
+├── view_with_sensors_windows.sh # helper shell script for Windows
+└── view_with_sensors.sh # helper shell script for Linux/macOS
 ```
 
 ---
