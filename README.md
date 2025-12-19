@@ -124,7 +124,7 @@ The `view_object_with_sensors.py` script allows you to interactively view any YC
 ### Basic Usage
 
 **macOS / Linux:**
-For **macOS** if you want to run with `--enable_gui` replace `python` with `mjpython`. 
+For **macOS** if you want to run with gui turned replace `python` with `mjpython`. 
 ```bash
 # if you are using a virtual environment activate it first
 # View an object without logging

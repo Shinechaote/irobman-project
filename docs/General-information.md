@@ -27,6 +27,7 @@ When `--save-sensors` is enabled, logs are saved to `sensor_logs/<ObjectName>_<t
 
 **macOS:**
 ```bash
+# mjpython if gui is turned on
 # Use EGL for offscreen rendering (recommended)
 export MUJOCO_GL=egl
 python view_object_with_sensors.py YcbBanana

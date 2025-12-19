@@ -1,7 +1,6 @@
    # Intelligent Robotic Manipulation
    
-   The overall Goal of the project is to grasp a YCB-Object and place it in a goal basket while avoiding obstacles. To do
-   this we have provided some helpful tips/information on various subtasks that you may or may not need to solve. Perception (task 1) to detect the graspable object, Controller (task 2) to move your robot arm, sample and execute a grasp (task 3), localize and track obstacles (task 4) and plan the trajectory to place the object in the goal, while avoiding the obstacles (task 5). Note that, what we mention in the task subparts are just for guidance and you are fully free to choose whatever you want to use to accomplish the full task. But you need to make sure that you don't use privilege information from the sim in the process.
+   The overall Goal of the project is to grasp a YCB-Object and place it in a goal basket while avoiding obstacles. To do this we have provided some helpful tips/information on various subtasks that you may or may not need to solve. Perception (task 1) to detect the graspable object, Controller (task 2) to move your robot arm, sample and execute a grasp (task 3), localize and track obstacles (task 4) and plan the trajectory to place the object in the goal, while avoiding the obstacles (task 5). Note that, what we mention in the task subparts are just for guidance and you are fully free to choose whatever you want to use to accomplish the full task. But you need to make sure that you don't use privilege information from the sim in the process.
    
    ### Things you can change and data that you can use:
    
@@ -41,6 +40,9 @@
        - Full setup: Being able to execute pick and place with obstacles present (+25)
    - A part of your marks is also fixed on the report (+10)
    
+   - You need to complete at all the given **5** tasks to qualify for the full marks.
+
+   
    - We will only consider the checkpoints as complete if you provide a metric or a success rate for each.
    - The format of the report will be the standard TU-Darmstadt format.
    - You can choose any 6 objects from the available 10 objects to show your results.
@@ -54,7 +56,7 @@
    
    ## Task 1 (Perception)
    
-   Implement an object 6D pose estimation workflow using a simulation environment.
+   You can use a 6D object pose estimation workflow using a simulation environment.
    
    *Reference*
    Global registration (coarse pose estimation) [Tutorial](https://www.open3d.org/docs/release/tutorial/pipelines/global_registration.html)
@@ -63,19 +65,12 @@
    
    ## Task 2 (Control)
    
-   Implement an IK-solver for the Franka-robot. You can use the pseudo-inverse or the transpose based solution. Use Your IK-solver to move the robot to a certain goal position. This Controller gets used throughout the project (e.g. executing the grasp - moving the object to the goal).
+   To control the robot an IK-solver can be used. You can use the pseudo-inverse or the transpose based solution. Use Your IK-solver to move the robot to a certain goal position. This Controller gets used throughout the project (e.g. executing the grasp - moving the object to the goal).
    
    ## Task 3 (Grasping)
    
-   Now that you have implemented a controller (with your IK solver) and tested it properly, it is time to put that to good use. From picking up objects to placing them a good well-placed grasp is essential. Hence, given an object you have to design a system that can effectively grasp it. You can use the model from the
-   
-   [Grasping exercise](https://github.com/iROSA-lab/GIGA)
-   
-   and
-   
-   [colab](https://colab.research.google.com/drive/1P80GRK0uQkFgDbHzLjwahyJOalW4M5vU?usp=sharing)
-   
-   to sample a grasp from a point-cloud. We have added a camera, where you can specify its position. You can set the YCB object to a fixed one (e.g. a Banana) for development. Showcase your ability to grasp random objects
+   Now that you have implemented a controller (with your IK solver) and tested it properly, it is time to put that to good use. From picking up objects to placing them a good well-placed grasp is essential. Hence, given an object you have to design a system that can effectively grasp it. You can use the model from the [Grasping exercise](https://github.com/iROSA-lab/GIGA)
+   and [colab](https://colab.research.google.com/drive/1P80GRK0uQkFgDbHzLjwahyJOalW4M5vU?usp=sharing) to sample a grasp from a point-cloud. We have added a camera, where you can specify its position. You can set the YCB object to a fixed one (e.g. a Banana) for development. Showcase your ability to grasp random objects
    for the final submission.
    
    ## Task 4 (Localization & Tracking)
@@ -97,6 +92,7 @@
    
    You can decide to use whichever techniques to solve the task, you can use either a `global planner` and a `local planner` combination, or you can directly use the sampling-based MPC to avoid static and dynamic obstacles.
    
-   # Final Words:
-   
-   We hope you have fun and explore robotics more deeply through this project.
+ 
+ Note: We have only shown one of the many possible pathways to solve the task. Feel free to explore and experiment with different approaches.
+# Final Words:
+ We hope you have fun and explore robotics more deeply through this project.
