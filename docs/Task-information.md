@@ -12,9 +12,12 @@
    - Information such as:
        - Robot joint information
        - Robot gripper and end-effector information
-       - Any information from camera
+       - Any information from camera (RGB and Depth)
        - Goal receptacle position
        - Camera position/matrices
+       - Contact information (but not for querying objects)
+  
+   Note: You are not allowed to use any information from the sim that can skip solving the tasks, like ground truth object positions, obstacle positions, re-configuring robot, etc.
    
    ### Things you cannot change without an explicit request to course TA's/Professor:
    
