@@ -24,7 +24,7 @@
   <worldbody>
     <body name="sample_object">
     <freejoint name="sample_object_free" />
-    <inertial mass="0.66" pos="0.01 0.0 0.01" diaginertia="1e-3 1e-3 1e-3" />
+    <inertial mass="0.066" pos="0.01 0.0 0.01" diaginertia="1e-3 1e-3 1e-3" />
       <geom
                 material="material_0"
                 mesh="textured"
