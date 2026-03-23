@@ -935,7 +935,19 @@ class SceneBuilder:
         quat_wxyz = quat_xyzw_to_wxyz(quat_xyzw)
         body.set("pos", f"{pos[0]} {pos[1]} {pos[2]}")
         body.set("quat", "{} {} {} {}".format(*quat_wxyz))
-        # Include source filename to avoid collisions when different objects share the same body name
+
+        for geom in body.findall(".//geom"):
+            group = geom.get("group")
+            if group == "3":
+                geom.set("friction", "2.0 0.01 0.001")
+                geom.set("solimp",   "0.99 0.995 0.01 0.5 2.0")
+                geom.set("solref",   "0.01 1.0")
+                geom.set("contype",     geom.get("contype",     "1"))
+                geom.set("conaffinity", geom.get("conaffinity", "1"))
+            elif group == "2":
+                geom.set("contype",     "0")
+                geom.set("conaffinity", "0")
+
         source_stem = xml_path.stem
         patched_path = (
             xml_path.parent / f"_irobman_{source_stem}_{body_name}_patched.xml"
