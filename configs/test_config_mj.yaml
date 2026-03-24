@@ -3,7 +3,7 @@ mujoco:
   seed: 42
   timestep: 0.002
   gravity: [0, 0, -9.81]
-  gui: true
+  gui: false
   obstacle_toggle: true
 
   lights:
@@ -86,7 +86,7 @@ mujoco:
   grasp_object:
     name: sample_object
     body: sample_object
-    xml: assets/mujoco_objects/YcbMustardBottle/textured.xml # to change the grasp object update this
+    xml: assets/mujoco_objects/YcbCrackerBox/textured.xml # to change the grasp object update this
     place: table_center
     pos: [0.32, -0.6, 0.8]
     quat_xyzw: [0.0, 0.0, 0.0, 1.0]
