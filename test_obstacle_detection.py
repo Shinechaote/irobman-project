@@ -51,12 +51,12 @@ def runner(config, num_experiments):
         pred_orange = []
         gt_orange = []
 
-        images = []
+        # images = []
 
-        for t in tqdm(range(100), dynamic_ncols=True):
+        for t in tqdm(range(10000), dynamic_ncols=True):
             sim.step()
 
-            images.append(rgb)
+            # images.append(rgb)
 
             # Get IDs of obstacles
             red_g_id = mujoco.mj_name2id(sim.model, mujoco.mjtObj.mjOBJ_BODY, "obstacle_lr")
@@ -108,8 +108,8 @@ def runner(config, num_experiments):
                 break
 
         # estimates = {"red": pred_red, "orange": pred_orange}
-        estimates = {"red": gt_red, "orange": gt_orange}
-        create_tracking_video(images, estimates, intrinsic, extrinsic, output_path="tracking_output.mp4", fps=100)
+        # estimates = {"red": gt_red, "orange": gt_orange}
+        # create_tracking_video(images, estimates, intrinsic, extrinsic, output_path="tracking_output.mp4", fps=100)
         import matplotlib.pyplot as plt
         def visualize_trajectory(gt_points, pred_points, title="Ball Tracking"):
             gt = np.array(gt_points)
