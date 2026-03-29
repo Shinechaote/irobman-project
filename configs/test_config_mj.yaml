@@ -3,7 +3,7 @@ mujoco:
   seed: 42
   timestep: 0.002
   gravity: [0, 0, -9.81]
-  gui: true
+  gui: false
   obstacle_toggle: true
 
   lights:
